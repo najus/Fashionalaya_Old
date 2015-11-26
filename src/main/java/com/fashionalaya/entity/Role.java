@@ -15,9 +15,5 @@ public class Role {
 
 	@Column
 	private String roleName;
-	
-	@OneToOne
-	@PrimaryKeyJoinColumn
-	private User user;
 
 }
