@@ -53,6 +53,14 @@ public class User {
 
 	@Column
 	private String phone;
+	
+	@NotEmpty
+	@Column
+	private String username;
+	
+	@NotEmpty
+	@Column
+	private String password;
 
 	@Email
 	@NotNull
@@ -135,6 +143,30 @@ public class User {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public List<Preference> getPreference() {
+		return preference;
+	}
+
+	public void setPreference(List<Preference> preference) {
+		this.preference = preference;
 	}
 
 	public String getEmail() {
