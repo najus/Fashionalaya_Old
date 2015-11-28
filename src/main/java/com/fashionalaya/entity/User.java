@@ -81,6 +81,9 @@ public class User {
 	
 	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Wishlist> wishlist;
+	
+	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<Order> orderList;
 
 	public Integer getId() {
 		return id;
@@ -192,5 +195,13 @@ public class User {
 
 	public void setReviewList(List<Review> reviewList) {
 		this.reviewList = reviewList;
+	}
+
+	public List<Order> getOrderList() {
+		return orderList;
+	}
+
+	public void setOrderList(List<Order> orderList) {
+		this.orderList = orderList;
 	}
 }
