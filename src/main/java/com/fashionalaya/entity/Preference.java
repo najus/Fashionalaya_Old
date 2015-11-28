@@ -27,5 +27,8 @@ public class Preference {
 	@ManyToMany
 //	@JoinColumn(name="user_pref_id")
 	private List<User> user;
+	
+	@ManyToMany
+	private List<Product> product;
 
 }

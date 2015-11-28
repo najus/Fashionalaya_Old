@@ -12,6 +12,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -76,6 +77,9 @@ public class Product {
 	
 	@OneToMany(mappedBy = "product", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Review> reviewList;
+	
+	@ManyToMany(mappedBy = "product", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<Preference> preference;
 
 	public Integer getId() {
 		return id;
