@@ -34,7 +34,7 @@ public class Comment {
 	@Temporal(TemporalType.DATE)
 	private Date commentDate;
 	
-	@OneToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "user_id")
 	private User user;
 	

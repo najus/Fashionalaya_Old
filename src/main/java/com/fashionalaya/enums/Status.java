@@ -3,5 +3,7 @@ package com.fashionalaya.enums;
 public enum Status {
 
 	DRAFT,
-	PUBLISHED;
+	PUBLISHED,
+	IN_CART,
+	PROCESSED;
 }
