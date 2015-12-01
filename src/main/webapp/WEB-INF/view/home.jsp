@@ -7,6 +7,8 @@
 <title>Fashionalaya Home</title>
 </head>
 <body>
-
+	<h1 class="page-header">
+		<h1>Welcome ${username}</h1>
+	</h1>
 </body>
 </html>
